@@ -62,3 +62,17 @@
         padding: 0.5rem 1.5rem;
     }
 }
+
+.datePicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 15%;
+    background-color: #4b4b4b;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    color: green;
+}

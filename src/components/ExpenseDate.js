@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 
-function ExpenseDate(props) {
-  const [startDate, setStartDate] = useState(new Date());
+function ExpenseDate() {
+  const [selectedDate, setStartDate] = useState(null);
   return (
     <DatePicker
-      selected={startDate}
+      selected={selectedDate}
       onchange={(date) => setStartDate(date)}
     ></DatePicker>
   );
