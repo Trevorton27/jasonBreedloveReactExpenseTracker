@@ -11,7 +11,7 @@ function ExpenseDate(props) {
   };
 
   return (
-    <div>
+    <div className={".datepicker"}>
       <DatePicker
         className="form-control form-control-sm"
         type="text"
