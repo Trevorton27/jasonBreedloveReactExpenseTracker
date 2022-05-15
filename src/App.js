@@ -30,7 +30,7 @@ function App() {
     },
   ];
   return (
-    <div>
+    <div className="container">
       <h1>Expense Tracker</h1>
       <ExpenseItem
         title={expenses[0].title}
