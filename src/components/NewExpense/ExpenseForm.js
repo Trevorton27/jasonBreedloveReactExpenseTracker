@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./NewExpenseForm.css";
-// import ExpenseDate from "../ExpenseDate";
 import "react-datepicker/dist/react-datepicker.css";
-import NewExpense from "./NewExpense";
-
+import { btn } from "react-bootstrap";
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const titleChangeHandler = (event) => {
@@ -70,6 +68,13 @@ const ExpenseForm = (props) => {
           />
         </div>
         <div className={"new-expense__actions"}></div>
+        <button
+          type={"button"}
+          onClick={props.onCancel}
+          className="btn btn-primary"
+        >
+          Cancel
+        </button>
         <button type={"submit"}>Add Expense</button>
       </div>
     </form>
