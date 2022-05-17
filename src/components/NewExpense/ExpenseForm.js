@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./NewExpenseForm.css";
-import ExpenseDate from "../ExpenseDate";
+// import ExpenseDate from "../ExpenseDate";
 import "react-datepicker/dist/react-datepicker.css";
+import NewExpense from "./NewExpense";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -16,12 +17,12 @@ const ExpenseForm = () => {
     console.log(enteredAmount);
   };
 
-  //partially done, pull data out of expenseDate
   const [enteredDate, setEnteredDate] = useState("");
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
     console.log(enteredDate);
   };
+
   const submitHandler = (event) => {
     event.preventDefault();
     const expenseData = {
@@ -29,7 +30,10 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: enteredDate,
     };
-    console.log(expenseData);
+    props.onSaveExpenseData(expenseData);
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
   };
   return (
     <form onSubmit={submitHandler}>
@@ -40,6 +44,7 @@ const ExpenseForm = () => {
             type="text"
             name="title"
             placeholder="Title"
+            value={enteredTitle}
             onChange={titleChangeHandler}
           />
           <label>Amount</label>
@@ -49,6 +54,7 @@ const ExpenseForm = () => {
             step="0.01"
             name="amount"
             placeholder="Amount"
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
           {/*<ExpenseDate />*/}
@@ -59,6 +65,7 @@ const ExpenseForm = () => {
             max="2022-12-31"
             name="date"
             placeholder=""
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>

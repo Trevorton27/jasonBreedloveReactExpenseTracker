@@ -1,6 +1,7 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate.js";
 import React, { useState } from "react";
+import Card from "../UI/Card.js";
 
 function ExpenseItem(props) {
   const [title, setTitle] = useState(props.title);
@@ -10,16 +11,13 @@ function ExpenseItem(props) {
     console.log(title);
   };
   return (
-    <div className="expense-item">
-      <span className="datePicker">
-        <ExpenseDate></ExpenseDate>
-      </span>
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
       <div className="expense-item__description datePicker">
         <h2>{title}</h2>
       </div>
       <div className="expense-item_price">${props.amount}</div>
-      <button onClick={clickHandler}>Change Title</button>
-    </div>
+    </Card>
   );
 }
 
