@@ -35,15 +35,14 @@ const ExpenseForm = (props) => {
     <form onSubmit={submitHandler} className={"container bg-gradient"}>
       <div>
         <div className={"form-group"}>
-          {/*<div className={"new-expense__control"}>*/}
-          <label>Title</label>
+          <label className={"form-floating"}>Title</label>
           <input
             type="text"
             name="title"
             placeholder="Title"
             value={enteredTitle}
             onChange={titleChangeHandler}
-            // className={"form-control"}
+            className={"input-lg form-control-lg"}
           />
           <label>Amount</label>
           <input
@@ -54,23 +53,23 @@ const ExpenseForm = (props) => {
             placeholder="Amount"
             value={enteredAmount}
             onChange={amountChangeHandler}
-            // className={"form-control"}
+            className={"input-lg form-control-lg"}
           />
-          {/*<ExpenseDate />*/}
-          <label>Date</label>
-          <input
-            type="date"
-            min="2019-01-01"
-            max="2022-12-31"
-            name="date"
-            placeholder=""
-            value={enteredDate}
-            onChange={dateChangeHandler}
-            // className={"form-control"}
-          />
+          <div className={"form-group"}>
+            <label>Date</label>
+            <input
+              type="date"
+              min="2019-01-01"
+              max="2022-12-31"
+              name="date"
+              placeholder=""
+              value={enteredDate}
+              onChange={dateChangeHandler}
+              className={"input-lg form-control-lg"}
+            />
+          </div>
         </div>
-        {/*<div className={"new-expense__actions"}></div>*/}
-        <div>
+        <div className={"form-group"}>
           <button
             className={"btn btn-primary"}
             type="button"
@@ -78,10 +77,6 @@ const ExpenseForm = (props) => {
           >
             Cancel
           </button>
-          {/*type={"button"}*/}
-          {/*onClick={props.onCancel}*/}
-          {/*className="btn btn-primary" > Cancel*/}
-          {/*</button>*/}
           <button type={"submit"} className={"btn btn-primary"}>
             Add Expense
           </button>

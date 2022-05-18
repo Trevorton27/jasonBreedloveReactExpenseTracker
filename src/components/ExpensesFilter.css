@@ -16,9 +16,19 @@
     margin-bottom: 0.5rem;
 }
 
-.expenses-filter select {
-    font: inherit;
-    padding: 0.5rem 3rem;
-    font-weight: bold;
-    border-radius: 6px;
+/*.expenses-filter select {*/
+/*    font: inherit;*/
+/*    padding: 0.5rem 3rem;*/
+/*    font-weight: bold;*/
+/*    border-radius: 6px;*/
+/*}*/
+
+.form-select{
+    width: 25%;
+    border: 5px solid #E800FC;
+    background-color: greenyellow;
+    color: #E800FC;
+    font-weight: bolder;
+    text-align: center;
+
 }
