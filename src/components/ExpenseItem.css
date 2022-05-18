@@ -1,6 +1,6 @@
 .expense-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     padding: 0.5rem;
@@ -28,7 +28,7 @@
     font-size: 2rem;
     flex: 1;
     margin: 0 1rem;
-    color: white;
+    color: #ff00ff;
     /*border: 2px solid #40005d;*/
     /*padding: 0.5rem .5rem;*/
 }
@@ -36,8 +36,8 @@
 .expense-item_price {
     font-size: .8rem;
     font-weight: bold;
-    color: cyan;
-    background-color: #ff00ff;
+    color: #720da2;
+    background-color: darkcyan;
     border: 5px solid darkcyan;
     padding: 0.5rem;
     border-radius: 12px;
@@ -63,19 +63,6 @@
         padding: 0.5rem 1.5rem;
         width: 10rem;
         height: 4rem;
-    }
-    .expense-item__date {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-        padding: 0.5rem;
-        margin: 1rem 0;
-        border-radius: 12px;
-        background-color: greenyellow;
-        font-size: 1.3rem;
-        color: #E800FC;
-        font-weight: bold;
-        border: 1px solid #40005d;
+        border-radius: 100px;
     }
 }
