@@ -1,4 +1,4 @@
-.new-expense {
+.form-control {
     /*background-color: #a892ee;*/
     padding: 1rem;
     margin: 2rem auto;
@@ -7,7 +7,7 @@
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(to top, #0de30d 0%, #e510e5 100%);
+    background: linear-gradient(to top, darkgrey 50%, darkcyan 100%);
 }
 
 .new-expense button {
@@ -39,4 +39,16 @@
 .new-expense button.alternative:hover,
 .new-expense button.alternative:active {
     background-color: #ddb3f8;
+}
+
+.labelForm{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #220131;
+}
+input{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: darkgrey;
+    color: darkcyan;
 }

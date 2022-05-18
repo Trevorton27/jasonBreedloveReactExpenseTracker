@@ -33,9 +33,9 @@ const ExpenseForm = (props) => {
   };
   return (
     <form onSubmit={submitHandler} className={"container bg-gradient"}>
-      <div>
-        <div className={"form-group"}>
-          <label className={"form-floating"}>Title</label>
+      <div className={"form-control form-control-lg"}>
+        <div className={"form-floating"}>
+          <label className={"labelForm"}>Title</label>
           <input
             type="text"
             name="title"
@@ -44,19 +44,21 @@ const ExpenseForm = (props) => {
             onChange={titleChangeHandler}
             className={"input-lg form-control-lg"}
           />
-          <label>Amount</label>
-          <input
-            type="number"
-            min="0.01"
-            step="0.01"
-            name="amount"
-            placeholder="Amount"
-            value={enteredAmount}
-            onChange={amountChangeHandler}
-            className={"input-lg form-control-lg"}
-          />
-          <div className={"form-group"}>
-            <label>Date</label>
+          <div className={"form-floating"}>
+            <label className={"labelForm"}>Amount</label>
+            <input
+              type="number"
+              min="0.01"
+              step="0.01"
+              name="amount"
+              placeholder="Amount"
+              value={enteredAmount}
+              onChange={amountChangeHandler}
+              className={"input-lg form-control-lg"}
+            />
+          </div>
+          <div className={"form-floating"}>
+            <label className={"labelForm"}>Date</label>
             <input
               type="date"
               min="2019-01-01"
