@@ -1,24 +1,21 @@
+import { Container, Row, Col, Button, Card, Form } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import "./NewExpenseForm.css";
-import "react-datepicker/dist/react-datepicker.css";
-import { btn } from "react-bootstrap";
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
-    console.log(enteredTitle);
   };
 
   const [enteredAmount, setEnteredAmount] = useState("");
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
-    console.log(enteredAmount);
   };
 
   const [enteredDate, setEnteredDate] = useState("");
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
-    console.log(enteredDate);
   };
 
   const submitHandler = (event) => {
@@ -26,7 +23,7 @@ const ExpenseForm = (props) => {
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate,
+      date: new Date(enteredDate),
     };
     props.onSaveExpenseData(expenseData);
     setEnteredTitle("");
@@ -71,7 +68,7 @@ const ExpenseForm = (props) => {
         <button
           type={"button"}
           onClick={props.onCancel}
-          className="btn btn-primary"
+          // className="btn btn-primary"
         >
           Cancel
         </button>

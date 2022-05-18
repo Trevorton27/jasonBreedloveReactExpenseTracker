@@ -1,3 +1,5 @@
+import { Container, Row, Col, Button, Card, Form } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses";
@@ -39,7 +41,7 @@ const App = () => {
     });
   };
   return (
-    <div className="container">
+    <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
