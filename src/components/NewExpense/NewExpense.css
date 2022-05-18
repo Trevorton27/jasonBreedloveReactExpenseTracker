@@ -11,19 +11,23 @@
 
 .new-expense button {
     font: inherit;
+    font-weight: bold;
     cursor: pointer;
-    padding: 1rem 2rem;
-    border: 1px solid #40005d;
-    background-color: #40005d;
-    color: white;
-    border-radius: 12px;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 5px outset #E800FC;
+    background-color: greenyellow;
+    color: #E800FC;
+    border-radius: 20px;
     margin-right: 1rem;
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .new-expense button:hover,
 .new-expense button:active {
-    background-color: #510674;
-    border-color: #510674;
+    background-color: #E800FC;
+    /*border-color: greenyellow;*/
+    border: 5px solid greenyellow;
 }
 
 .new-expense button.alternative {

@@ -2,6 +2,7 @@ import { Container, Row, Col, Button, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import "./NewExpenseForm.css";
+
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const titleChangeHandler = (event) => {
@@ -31,9 +32,10 @@ const ExpenseForm = (props) => {
     setEnteredDate("");
   };
   return (
-    <form onSubmit={submitHandler}>
-      <div className={"new-expense__controls"}>
-        <div className={"new-expense__control"}>
+    <form onSubmit={submitHandler} className={"container bg-gradient"}>
+      <div>
+        <div className={"form-group"}>
+          {/*<div className={"new-expense__control"}>*/}
           <label>Title</label>
           <input
             type="text"
@@ -41,6 +43,7 @@ const ExpenseForm = (props) => {
             placeholder="Title"
             value={enteredTitle}
             onChange={titleChangeHandler}
+            // className={"form-control"}
           />
           <label>Amount</label>
           <input
@@ -51,6 +54,7 @@ const ExpenseForm = (props) => {
             placeholder="Amount"
             value={enteredAmount}
             onChange={amountChangeHandler}
+            // className={"form-control"}
           />
           {/*<ExpenseDate />*/}
           <label>Date</label>
@@ -62,17 +66,26 @@ const ExpenseForm = (props) => {
             placeholder=""
             value={enteredDate}
             onChange={dateChangeHandler}
+            // className={"form-control"}
           />
         </div>
-        <div className={"new-expense__actions"}></div>
-        <button
-          type={"button"}
-          onClick={props.onCancel}
-          // className="btn btn-primary"
-        >
-          Cancel
-        </button>
-        <button type={"submit"}>Add Expense</button>
+        {/*<div className={"new-expense__actions"}></div>*/}
+        <div>
+          <button
+            className={"btn btn-primary"}
+            type="button"
+            onClick={props.onCancel}
+          >
+            Cancel
+          </button>
+          {/*type={"button"}*/}
+          {/*onClick={props.onCancel}*/}
+          {/*className="btn btn-primary" > Cancel*/}
+          {/*</button>*/}
+          <button type={"submit"} className={"btn btn-primary"}>
+            Add Expense
+          </button>
+        </div>
       </div>
     </form>
   );

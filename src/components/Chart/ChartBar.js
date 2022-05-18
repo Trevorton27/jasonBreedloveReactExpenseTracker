@@ -1,7 +1,5 @@
 import React from "react";
-
 import "./ChartBar.css";
-import chart from "./Chart";
 
 const ChartBar = (props) => {
   let barFillHeight = "0%";
@@ -9,7 +7,7 @@ const ChartBar = (props) => {
     barFillHeight = Math.round((props.value / props.maxValue) * 100) + "%";
   }
   return (
-    <div className={"chart-bar"}>
+    <div className={"chart-bar container"}>
       <div className={"chart-bar__inner"}>
         <div
           className={"chart-bar__fill"}
