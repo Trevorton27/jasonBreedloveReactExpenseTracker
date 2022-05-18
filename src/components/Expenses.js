@@ -17,15 +17,17 @@ const Expenses = (props) => {
     return date1.toLocaleString("en-US", { year: "numeric" }) === filteredYear;
   });
   return (
-    <div>
+    <div className={"container"}>
       <Card className="expenses">
         <ExpensesFilter
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
         <ExpensesChart expenses={filteredExpenses} />
-        <ExpenseList items={filteredExpenses} />
       </Card>
+      <div className={"expenses__header"}>
+        <ExpenseList items={filteredExpenses} />
+      </div>
     </div>
   );
 };

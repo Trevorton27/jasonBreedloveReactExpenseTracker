@@ -10,13 +10,15 @@ function ExpenseItem(props) {
     setTitle("Updated");
   };
   return (
-    <Card className="expense-item">
+    // <Card className={"container"}>
+    <div className={"expense-item container"}>
       <ExpenseDate date={props.date} />
-      <div className="expense-item__description datePicker">
+      <div className={"expense-item__description"}>
         <h2>{props.title}</h2>
       </div>
       <div className="expense-item_price">${props.amount}</div>
-    </Card>
+      {/*// </Card>*/}
+    </div>
   );
 }
 

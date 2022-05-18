@@ -6,3 +6,14 @@
     width: 50rem;
     max-width: 95%;
 }
+.isolator{
+    background-color: red;
+}
+.expenses__header {
+    padding: 1rem;
+    background-color: darkcyan;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 100%;
+    align-items: center;
+}
