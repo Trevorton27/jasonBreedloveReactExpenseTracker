@@ -6,9 +6,7 @@
     width: 50rem;
     max-width: 95%;
 }
-.isolator{
-    background-color: red;
-}
+
 .expenses__header {
     padding: 1rem;
     background-color: darkcyan;

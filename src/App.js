@@ -4,6 +4,7 @@ import "./App.css";
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses";
 import React, { useState } from "react";
+import DeleteExpenseItem from "./components/DeleteExpense/DeleteExpense";
 
 const DUMMY_EXPENSES = [
   {
@@ -34,18 +35,21 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
-
   const addExpenseHandler = (expense) => {
     setExpenses((previousExpense) => {
       return [expense, ...previousExpense];
     });
   };
+
   return (
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
+      <DeleteExpenseItem items={expenses} />
+
     </div>
   );
 };
 // }
 export default App;
+//filter expenses that do not match the selected element and redraw that new array to the screen rather than changing the array

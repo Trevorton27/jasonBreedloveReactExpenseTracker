@@ -1,5 +1,4 @@
-import React from "react";
-import { Alert } from "react-bootstrap";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import ExpenseItem from "./ExpenseItem";
@@ -9,6 +8,7 @@ const ExpenseList = (props) => {
   if (props.items.length === 0) {
     return <h2 className="alert alert-danger">Found no expenses</h2>;
   }
+
   return (
     <ul className="expense-list">
       {props.items.map((expense) => (
@@ -18,7 +18,7 @@ const ExpenseList = (props) => {
           amount={expense.amount}
           date={expense.date}
         />
-      ))}
+        ))}
     </ul>
   );
 };
