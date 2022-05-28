@@ -26,7 +26,7 @@ const Expenses = (props) => {
         <ExpensesChart expenses={filteredExpenses} />
       </Card>
       <div className={"expenses__header"}>
-        <ExpenseList items={filteredExpenses} />
+        <ExpenseList setExpenses={props.setExpenses} items={filteredExpenses} />
       </div>
     </div>
   );
