@@ -1,12 +1,12 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import NewExpense from "./components/NewExpense/NewExpense";
-import Expenses from "./components/Expenses";
-import React, { useState } from "react";
-import ExpenseItem from "./components/ExpenseItem";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/Expenses';
+import React, { useState } from 'react';
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);
+
   const addExpenseHandler = (expense) => {
     setExpenses((previousExpense) => {
       return [...previousExpense, expense];
@@ -14,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses setExpenses={setExpenses} items={expenses} />
     </div>

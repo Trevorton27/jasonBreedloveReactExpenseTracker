@@ -1,10 +1,10 @@
-import React from "react";
-import ExpenseItem from "./ExpenseItem";
-import "./ExpenseList.css";
+import React, { useEffect } from 'react';
+import ExpenseItem from './ExpenseItem';
+import './ExpenseList.css';
 
 const ExpenseList = (props) => {
   if (props.items.length === 0) {
-    return <h2 className="alert alert-danger">Found no expenses</h2>;
+    return <h2 className='alert alert-danger'>Found no expenses</h2>;
   }
 
   const deleteExpense = (id) => {
@@ -12,7 +12,7 @@ const ExpenseList = (props) => {
   };
 
   return (
-    <ul className="expense-list">
+    <ul className='expense-list'>
       {props.items.map((expense) => (
         <ExpenseItem
           key={expense.id}
